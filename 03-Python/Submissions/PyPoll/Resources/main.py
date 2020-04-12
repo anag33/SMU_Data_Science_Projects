@@ -2,7 +2,7 @@
 import csv
 
 # Set path for file
-csvpath = r"PyPoll\Resources\election_data.csv"
+csvpath = r"Resources\election_data.csv"
 
 # Counter for the votes
 totalVotes = 0

@@ -2,7 +2,7 @@
 import csv
 
 # Set path for file
-csvpath = r"PyBank\Resources\budget_data.csv"
+csvpath = r"Submissions\PyBank\Resources\budget_data.csv"
 
 # Counter for the months
 tMonths = 0
