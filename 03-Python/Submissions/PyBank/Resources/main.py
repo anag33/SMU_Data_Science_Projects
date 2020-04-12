@@ -85,11 +85,11 @@ print("Financial Analysis" + "\n")
 
 print("..................................................."  + "\n" )
 
-print("Total months: " + str(tMonths) + "\n")
+print("Total Months: " + str(tMonths) + "\n")
 
 print("Total: " + "$" + str(tProfit) + "\n")
 
-print("Average change: " + "$" + str(round(averageChange, 2)) + "\n")
+print("Average Change: " + "$" + str(round(averageChange, 2)) + "\n")
 
 print("Greatest Increase in Profits: " + (greatestDate)  + " " + "$" + "(" + str(greatestIncrease) + ")" + "\n" )
 
@@ -103,11 +103,11 @@ file.write("Financial Analysis" + "\n")
 
 file.write("..................................................."  + "\n" )
 
-file.write("Total months: " + str(tMonths) + "\n")
+file.write("Total Months: " + str(tMonths) + "\n")
 
 file.write("Total: " + "$" + str(tProfit) + "\n")
 
-file.write("Average change: " + "$" + str(round(averageChange, 2)) + "\n")
+file.write("Average Change: " + "$" + str(round(averageChange, 2)) + "\n")
 
 file.write("Greatest Increase in Profits: " + (greatestDate)  + " " + "$" + "(" + str(greatestIncrease) + ")" + "\n" )
 
