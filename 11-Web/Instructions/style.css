@@ -1,0 +1,65 @@
+ .card_header_override {
+     /* font-size: 60px; */
+     font-weight: bold;
+     /* background-color: white; */
+ }
+ 
+ .image_fluid {
+     width: 100%;
+ }
+ 
+ .image_fit {
+     height: auto;
+ }
+ 
+ .footer_override {
+     margin: 0px;
+     text-align: center;
+     background-color: rgb(73, 71, 71);
+ }
+ 
+ .subtitle {
+     font-style: italic;
+     text-align: center;
+ }
+ 
+ .image_clickable {
+     cursor: pointer;
+ }
+ 
+ .carousel-inner img {
+     width: 100%;
+     height: auto
+ }
+ 
+ .card-header {
+     font-weight: bolder;
+ }
+ 
+ table {
+     border-collapse: collapse;
+     border: 2px black solid;
+     font: 12px sans-serif;
+ }
+ 
+ td {
+     border: 1px black solid;
+     padding: 5px;
+ }
+ 
+ .footer {
+     text-align: center;
+     background-color: rgb(73, 71, 71);
+ }
+ 
+ .image_nav_active {
+     border-color: var(--main-highlight-color);
+ }
+ 
+ .imgAnchor:focus img {
+     outline: 5px solid rgb(0, 255, 179);
+ }
+ 
+ .imagframe {
+     border: 2px solid rgb(0, 255, 179);
+ }
