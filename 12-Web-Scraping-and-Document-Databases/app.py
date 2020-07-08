@@ -11,7 +11,7 @@ conn = 'mongodb://localhost:27017'
 client = pymongo.MongoClient(conn)
 
 #Scrape Route to import scrape_mars.py script and call scrape function
-@app.route("/")
+@app.route("/") 
 def index():
     mars = client.db.mars.find_one()
     return render_template("index.html", mars=mars)
@@ -20,10 +20,9 @@ def index():
 def scrape():
     mars_app = client.db.mars
     mars = scrape_mars.scrapemarsNews()
-    
 
-    mars_app.update({}, mars, upsert=True)
 
+    mars_app.replace_one({}, mars, upsert=True)
     #return "Scraping Successful!"
     return redirect('/')
 

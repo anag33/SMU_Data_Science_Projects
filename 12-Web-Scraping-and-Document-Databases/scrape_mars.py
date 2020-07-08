@@ -11,7 +11,8 @@ def scrapemarsNews():
     #Using Splinter - dynamic URL
     executable_path = {'executable_path': r'C:\Users\anagi\OneDrive\Desktop\Smu REAL\smu-dal-data-pt-03-2020-u-c\chromedriver_win32 (3)\chromedriver.exe'}
     browser = Browser('chrome', **executable_path, headless=True)
-    
+   
+
     #visit URL - Nasa Mars News
     url = 'https://mars.nasa.gov/news/'
     browser.visit(url)
@@ -54,22 +55,28 @@ def scrapemarsNews():
     html = browser.html
     soup = BeautifulSoup(html, "lxml")
     
-    #Get Weather
-    allTweets_Maybe = soup.find_all("span")
+       #Get Weather
+    weather = soup.find_all("span")
+    
     tweetText = ""
-    for tweet in allTweets_Maybe:
+
+    for tweet in weather:
         if tweet.text:
             if "InSight sol" in tweet.text:
                 tweetText = tweet.text
-                break
+                break   
+
                 
-    allLinks_Maybe = soup.find_all("a")
+    allLinksTweet = soup.find_all("a")
+    
     tweetLink = ""
-    for link in allLinks_Maybe:
+
+    for link in allLinksTweet:
         if link['href']:
             if "status" in link["href"]:
                 tweetLink = "https://www.twitter.com" + link["href"]
                 break
+
     
     # NAVIGATE TO NEXT WEBSITE 
     #visit URL - Mars Facts
@@ -133,10 +140,8 @@ def scrapemarsNews():
         # Append the retreived information into a list of dictionaries 
         hemisphere_image_urls.append({"title" : title, "img_url" : img_url})
     
-
-        # Display hemisphere_image_urls
         hemisphere_image_urls
-
+        
        # close the browser
         browser.quit()
     
@@ -153,4 +158,4 @@ def scrapemarsNews():
             "dateScraped": datetime.now()
         }
     
-        return rtnDict
+        return rtnDict      
