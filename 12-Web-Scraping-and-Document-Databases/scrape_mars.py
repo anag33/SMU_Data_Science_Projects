@@ -5,6 +5,8 @@ import pandas as pd
 from splinter import Browser
 from datetime import datetime
 import json
+import time
+import re
 
 
 def scrapemarsNews():
@@ -52,6 +54,8 @@ def scrapemarsNews():
     #visit URL - Mars Twitter
     url = 'https://twitter.com/marswxreport?lang=en'
     browser.visit(url)
+    time.sleep(5)
+    
     html = browser.html
     soup = BeautifulSoup(html, "lxml")
     
@@ -65,18 +69,7 @@ def scrapemarsNews():
             if "InSight sol" in tweet.text:
                 tweetText = tweet.text
                 break   
-
-                
-    allLinksTweet = soup.find_all("a")
-    
-    tweetLink = ""
-
-    for link in allLinksTweet:
-        if link['href']:
-            if "status" in link["href"]:
-                tweetLink = "https://www.twitter.com" + link["href"]
-                break
-
+     
     
     # NAVIGATE TO NEXT WEBSITE 
     #visit URL - Mars Facts
@@ -150,7 +143,6 @@ def scrapemarsNews():
             "newsLink": newsLink,
             "newsText": newsText,
             "featureImageURL": imageURL,
-            "tweetWeatherURL": tweetLink,
             "tweetWeatherText": tweetText,
             "marsStatsHTML": data_html,
             "marsStats": data_stats,
