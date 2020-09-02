@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tableau</title>
+    <!-- Bootswatch -->
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.0.0.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/minty/bootstrap.min.css">
+
+    <!-- Our JS -->
+    <script type="text/javascript" src="static/js/app.js"></script>
+
+</head>
+
+<body>
+    <!-- Navbar with Dropdown -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary " style="margin-bottom: 20px; ">
+
+        <button class="navbar-toggler " type="button " data-toggle="collapse " data-target="#navbarColor01 " aria-controls="navbarColor01 " aria-expanded="false " aria-label="Toggle navigation ">
+          <span class="navbar-toggler-icon "></span>
+        </button>
+        <div class="container-fluid ">
+            <div class="navbar-header ">
+                <h1>
+                    <span class=" badge badge-lg badge-primary ">Citi Bike Analysis</span>
+                </h1>
+            </div>
+
+            <div class="collapse navbar-collapse justify-content-end " id="navbarColor01 ">
+                <ul class="navbar-nav">
+                    <!-- Dropdown -->
+                    <li class="nav-item active">
+                        <a class="nav-link " href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="/data_to_visualize_citibike.csv">Data</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Actual Content -->
+    <div class="container-fluid  ">
+        <div class="row ">
+            <div class="col-md-12 ">
+                <div class="card border-primary mb-3 ">
+
+
+                    <div id="tableauParent" class="container-fluid">
+                        <div style="height:900px" id="tableauViz"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
